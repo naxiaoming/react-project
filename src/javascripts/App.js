@@ -5,7 +5,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        	撒的撒
+        	不听不听,晓明念经!
+        	不理不理,王八是你!
       </div>
     );
   }
