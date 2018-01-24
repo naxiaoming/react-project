@@ -1,0 +1,48 @@
+.header{
+    width:100%;
+    height:0.6rem;
+    background:#fff;
+    font-size:0.14rem;
+    display:flex;
+    justify-content:space-between;
+    position:fixed;
+    top:0;
+    .city{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        width:1.08rem;
+        padding-left:0.12rem;
+        span{
+            font-size:0.14rem;
+        }
+        i{
+            width:0.28rem;
+            height:0.28rem;
+            font-size:0.28rem;
+            margin-left:0.06rem;
+        }
+    }
+    .logo{
+        width:0.72rem;
+        height:0.31rem;
+        margin:auto;
+        background:url('http://static.loho88.com/assets/images/logo.head.png') no-repeat center;
+        background-size:contain;
+    }
+    ul{
+        display:flex;
+        justify-content:space-around;
+        align-items:center;
+        li{
+            width:0.6rem;
+            height:0.6rem;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            i{
+                font-size:0.28rem;
+            }
+        }
+    }
+}
