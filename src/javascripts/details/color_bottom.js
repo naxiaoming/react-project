@@ -1,10 +1,14 @@
-import React,{Component} from 'react'
-class ColorBottom extends Component{
-	
-	render(){
-		let {unioned,unionedImg}=this.props
+import React, {
+	Component
+} from 'react'
+class ColorBottom extends Component {
+	render() {
+		let {
+			unioned,
+			unionedImg
+		} = this.props
 		return(
-				<div className="color-choice-item">
+			<div className="color-choice-item">
 							
 								{
 									unionedImg.map((item,i)=>(
@@ -32,7 +36,6 @@ class ColorBottom extends Component{
 				            </div>
 		)
 	}
-	
+
 }
 export default ColorBottom
-

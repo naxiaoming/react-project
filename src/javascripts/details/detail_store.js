@@ -1,9 +1,11 @@
-import React,{Component} from 'react'
-class DetailStore extends Component{
-	
-	render(){
+import React, {
+	Component
+} from 'react'
+class DetailStore extends Component {
+
+	render() {
 		return(
-				<div className="detail-store">
+			<div className="detail-store">
 					<p>海淀圣熙8号店</p>
 					<div className="store-km">
 						<i className="fa fa-map-marker">25.82km <em>免费预约直营店验光</em></i>
@@ -19,6 +21,6 @@ class DetailStore extends Component{
 				</div>
 		)
 	}
-	
+
 }
 export default DetailStore

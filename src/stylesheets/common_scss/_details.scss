@@ -24,13 +24,14 @@
         }
     }
     .swiper-container {
-        padding: 1rem 0;
+        padding-top: 0.5rem;
         background: #fff;
         .swiper-pagination {
             background: -webkit-linear-gradient(bottom, #ddd, rgba(255, 255, 255, 0));
             padding-bottom: 0.05rem;
             text-align: center;
             line-height: 0.81rem;
+            position: static
         }
     }
     .details-title {
@@ -69,10 +70,17 @@
             font-size: 15px;
             background: #fff;
             padding: 0.12rem;
+            line-height: 0.2rem;
             span {
                 font-size: 17px;
                 color: #e8343b;
                 font-weight: 700;
+            }
+            b {
+                font-size: 0.12rem;
+            }
+            em {
+                font-size: 0.12rem;
             }
         }
     }
@@ -180,44 +188,44 @@
             line-height: 0.84rem;
         }
     }
-    
-    .detail-store{
-        margin-top:0.15rem;
-        margin-bottom:0.15rem;
+    .detail-store {
+        margin-top: 0.15rem;
+        margin-bottom: 0.15rem;
         background: #fff;
-        p{
+        p {
             padding: 0.12rem 0;
-            font-size:0.16rem;
+            font-size: 0.16rem;
             padding: 0.12rem 0.12rem;
         }
-        .store-km{
-            font-size:0.12rem;
+        .store-km {
+            font-size: 0.12rem;
             padding: 0 0.12rem;
-            em{
-                color:#ff9800;
-                margin-left:0.05rem
+            em {
+                color: #ff9800;
+                margin-left: 0.05rem
             }
         }
-        .store-address{
-            padding:0.2rem 0.12rem;
+        .store-address {
+            padding: 0.2rem 0.12rem;
             display: flex;
             justify-content: space-between;
             border-bottom: 1px solid #000000;
-            span{
-               
-                font-size:0.12rem;
-                width:3rem;
+            span {
+                font-size: 0.12rem;
+                width: 3rem;
             }
-            i{
-                color:#ec1c24;font-size:0.3rem;                
+            i {
+                color: #ec1c24;
+                font-size: 0.3rem;
             }
         }
-        .store-num{
+        .store-num {
             font-size: 0.12rem;
-            display: flex;justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
             padding: 0.1rem 0.12rem;
             align-items: center;
-            i{
+            i {
                 font-size: 0.2rem;
             }
         }
