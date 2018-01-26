@@ -4,7 +4,7 @@ import 'swiper/dist/css/swiper.min.css'
 
 class Banner extends Component{
 	shouldComponentUpdate(props){
-		if(props.data.length === this.props.data.length){
+		if(props.focus.length === this.props.focus.length){
 			return false
 		}else{
 			return true
@@ -14,17 +14,19 @@ class Banner extends Component{
 		new Swiper('.banner',{
 			pagination:{
 				el:'.banner-pagination'
-			}
+			},
+			autoplay:true,
+			loop: true
 		})
 	}
 	render(){
-		let { data } = this.props
-		console.log(data)
+		let { focus } = this.props
+		console.log(focus)
 		return (
 			<div className="swiper-container banner">
 				<div className="swiper-wrapper">
 				{
-					data.map((item,i)=>(
+					focus.map((item,i)=>(
 						<div className="swiper-slide" key={i}>
 							<img src={item.pic} alt="" />
 						</div>	

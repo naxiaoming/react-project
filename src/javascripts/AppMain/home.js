@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import Header from './header'
 import Content from './content'
+import Footer from './footer'
 
 import axios from 'axios'
 
@@ -9,7 +10,12 @@ class Home extends Component{
 		super(props)
 		this.state = {
 			data:{
-				focus:[]
+				focus:[],
+				ad:[],
+				adv_home:[],
+				cates:[],
+				classify:[],
+				popular:{}
 			}
 		}
 	}
@@ -27,7 +33,8 @@ class Home extends Component{
 		return (
 			<div className="home">
 				<Header />
-				<Content data={data.focus}/>
+				<Content focus={data.focus} ad={data.ad} adv_home={data.adv_home} cates={data.cates} classify={data.classify} popular={data.popular}/>
+				<Footer />
 			</div>
 		)
 	}
