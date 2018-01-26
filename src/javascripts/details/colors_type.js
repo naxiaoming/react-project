@@ -1,11 +1,18 @@
-import React,{Component} from 'react'
+import React, {
+	Component
+} from 'react'
 import ColorBottom from "./color_bottom"
-class ColorChoice extends Component{
-	
-	render(){
-		let {data,unioned,unionedImg}=this.props
+class ColorChoice extends Component {
+
+	render() {
+		let {
+			data,
+			unioned,
+			unionedImg
+		} = this.props
+
 		return(
-				<div>
+			<div>
 				
 					<div className="color-choice">
 						<p>颜色选择</p>
@@ -24,6 +31,6 @@ class ColorChoice extends Component{
 				</div>
 		)
 	}
-	
+
 }
 export default ColorChoice
