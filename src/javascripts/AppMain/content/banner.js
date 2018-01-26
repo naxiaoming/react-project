@@ -21,7 +21,7 @@ class Banner extends Component{
 	}
 	render(){
 		let { focus } = this.props
-		console.log(focus)
+//		console.log(focus)
 		return (
 			<div className="swiper-container banner">
 				<div className="swiper-wrapper">
