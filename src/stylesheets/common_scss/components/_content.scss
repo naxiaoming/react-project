@@ -82,7 +82,7 @@
         ul{
             overflow: hidden;
             margin:0;
-            li{
+            a{
                 float:left;
                 position:relative;
                 width:50%;
@@ -124,7 +124,7 @@
             background:#fff;
             width: 100%;
             margin: 0;
-            li{
+            a{
                 border-bottom:1px solid #e6e6e6;
                 text-align:center;  
                 padding:0.12rem;
@@ -211,7 +211,7 @@
                 font-size:0.12rem;
                 margin:0;
                 overflow:hidden;
-                li{
+                a{
                     position:relative; 
                     &:nth-child(2n+1):after{
                         content: '';
@@ -222,9 +222,6 @@
                         position: absolute;
                         right: 0;
                         top: 0;
-                    }
-                    &:last-child{
-                        border:0;
                     }
                     width:50%;
                     float:left;

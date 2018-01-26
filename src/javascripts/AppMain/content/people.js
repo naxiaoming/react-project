@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import { Link } from 'react-router'
 import Title from './common'
 
 class People extends Component{
@@ -14,11 +15,11 @@ class People extends Component{
 				<ul>
 					{
 						popular.show === undefined ? '' : popular.show.map((item)=>(
-							<li key={item.gid}>
+							<Link to={`/details/${item.gid}`} key={item.gid}>
 								<span>{item.tag}</span>
 								<p>{item.tag_en}</p>
 								<img src={item.pic} alt=""/>
-							</li>
+							</Link>
 						))
 					}		
 				</ul>

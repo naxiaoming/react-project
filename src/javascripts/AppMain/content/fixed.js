@@ -7,15 +7,15 @@ class Fixed extends Component{
 			t:null
 		}
 	}
-	componentWillMount(){
-		let that = this
-		window.onscroll=function(){
-			var scrollTop = document.documentElement.scrollTop||document.body.scrollTop
-			that.setState({
-				t:scrollTop
-			})
-		}
-	}
+//	componentWillMount(){
+//		let that = this
+//		window.onscroll=function(){
+//			var scrollTop = document.documentElement.scrollTop||document.body.scrollTop
+//			that.setState({
+//				t:scrollTop
+//			})
+//		}
+//	}
 	Totop(){
 		
 	}

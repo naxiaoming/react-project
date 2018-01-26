@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+import { Link } from 'react-router'
 import axios from 'axios'
 
 class Guess extends Component{
@@ -38,14 +39,14 @@ class Guess extends Component{
 					<ul>
 						{
 							dataLi.map((item,i)=>(
-								<li key={item.goodsId}>
-									<span>{item.isNew?'NEW':''}</span>
+								<Link to={`/details/${item.goodsId}`} key={item.goodsId}>
+									<span>NEW</span>
 									<div>
 										<img src={img[i]} alt=""/>
 									</div>
 									<p>{item.title}</p>
 									<b>¥ {item.price}</b>
-								</li>
+								</Link>
 							))
 						}
 					</ul>
