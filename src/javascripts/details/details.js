@@ -4,6 +4,7 @@ import React, {
 import ColorChoice from './colors_type'
 import DetailStore from "./detail_store"
 import BottomBox from "./detail_bottom"
+import PromiseItem from "./promiseItem"
 import BannerBox from "./detail_banner"
 import 'swiper/dist/css/swiper.min.css'
 import axios from "axios"
@@ -29,9 +30,8 @@ class Details extends Component {
 			that.setState({
 				data: res.data.result.info,
 				swipe: res.data.result.info.pics,
-				promiseTag: res.data.result.info.promiseTag,
-				txtcontent: res.data.result.txtcontent.replace(/src="\/images\/blank.gif"/g, '').replace(/vip-src="\/images\//g, 'src="http://image.loho88.com/images/').replace(/data-src="\/images\//g, 'src="http://image.loho88.com/images/'),
-
+				
+				txtcontent: res.data.result.txtcontent.replace(/src="\/images\/blank.gif"/g, '').replace(/vip-src="\/images\//g, 'src="http://image.loho88.com/images/').replace(/data-src="\/images\//g, 'src="http://image.loho88.com/images/').replace(/vip-src="\/includes\/kindeditor\/attached\//g,'src="http://image.loho88.com/includes/kindeditor/attached/').replace(/data-src="\/includes\/kindeditor\/attached\//g,'src="http://image.loho88.com/includes/kindeditor/attached/'),
 			})
 			if(res.data.result.unioned == '') {
 				that.setState({
@@ -51,6 +51,15 @@ class Details extends Component {
 			} else {
 				that.setState({
 					color: res.data.result.models
+				})
+			}
+			if(res.data.result.info.promiseTag == "") {
+				that.setState({
+					promiseTag: []
+				})
+			} else {
+				that.setState({
+					promiseTag: res.data.result.info.promiseTag
 				})
 			}
 
@@ -97,16 +106,12 @@ class Details extends Component {
 		            		<em>{data.salesNum}人已购买</em>
 		            	</div>
 		            </div>
-		            <div className="details-title-tag">
+		            
 			            	{
-			            		promiseTag.map((item,i)=>(
-			            			<span key={i}>
-			            				<i className="fa fa-check-square"></i>
-			            				<b>{item}</b>
-			            			</span>
-			            		))
+			            		promiseTag==""?'':<PromiseItem promiseTag={promiseTag}/>
 			            	}
-		            </div>
+			            	
+		            
 		            {
 		            	color==""?"":<ColorChoice data={color} unioned={unioned} unionedImg={unionedImg}/>
 		            }
