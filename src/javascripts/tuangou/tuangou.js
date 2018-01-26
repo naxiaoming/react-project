@@ -31,7 +31,7 @@ class TuanGou extends Component{
 		return(
 			<div className="tg">
 				<div className="tg-header">
-					<i className="fa fa-angle-left"></i>
+					<Link to="/home" className="fa fa-angle-left"></Link>
 					<span>团购分类</span>
 					<em><i onClick={this.xy} className="fa fa-th"></i></em>
 				</div>

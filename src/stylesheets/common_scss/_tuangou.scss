@@ -9,7 +9,7 @@
         height: 0.35rem;
         display: flex;
         justify-content: space-between;
-        i {
+        a {
             display: block;
             padding: 0.08rem;
             color: #fff;
@@ -22,6 +22,15 @@
             text-align: center;
             line-height: 0.35rem;
             font-weight: 400;
+        }
+        em{
+            i{
+                display: block;
+            padding: 0.08rem;
+            color: #fff;
+            font-size: 0.2rem;
+            color: #fff;
+            }
         }
     }
     .tg-header-list {
