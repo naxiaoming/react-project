@@ -1,17 +1,29 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: #f2f2f2;
 }
-*{
+
+* {
     box-sizing: border-box;
 }
-a{
+
+a {
     text-decoration: none;
     color: #333;
-    
 }
-h3{
+
+b {
+    font-weight: normal;
+}
+p{
+    margin:0px;
+}
+em {
+    font-style: normal;
+}
+
+h3 {
     font: inherit;
     font-size: 100%;
     margin: 0;
@@ -20,7 +32,9 @@ h3{
     border: 0;
 }
 
-ul,li,ol{
-    list-style:none;
-    padding:0;
+ul,
+li,
+ol {
+    list-style: none;
+    padding: 0;
 }
