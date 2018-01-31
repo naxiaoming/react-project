@@ -35,6 +35,7 @@ class Home extends Component{
 				<Header />
 				<Content focus={data.focus} ad={data.ad} adv_home={data.adv_home} cates={data.cates} classify={data.classify} popular={data.popular}/>
 				<Footer />
+				
 			</div>
 		)
 	}

@@ -25,7 +25,7 @@ class ColorBottom extends Component {
 								}
 				            	
 				            	
-				            	<a>
+				            	<a className="first-a">
 				            		<em>{unioned.tname}</em>
 				            		<span>
 				            			<b>{unionedImg==''?'':"¥"+unioned.price}</b>

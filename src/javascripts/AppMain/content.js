@@ -7,6 +7,7 @@ import Forlistbus from './content/forlistbus'
 import Guess from './content/guess'
 import Loho from './content/loho'
 import Fixed from './content/fixed'
+import BackTop from "../details/back-top"
 class Content extends Component{
 	constructor(props){
 		super(props)
@@ -37,6 +38,7 @@ class Content extends Component{
 				</p>
 				<Loho />
 				<Fixed />
+				<BackTop/>
 			</div>
 		)
 	}
