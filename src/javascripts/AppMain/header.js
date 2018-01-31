@@ -1,13 +1,14 @@
 import React,{Component} from 'react'
+import { Link } from 'react-router'
 
 class Header extends Component{
 	render(){
 		return (
 			<div className="header">
-				<div className="city">
+				<Link to="/choiceCity" className="city">
 					<span>北京</span>
 					<i className="fa fa-angle-down"></i>
-				</div>
+				</Link>
 				<div className="logo"></div>
 				<ul>
 					<li>

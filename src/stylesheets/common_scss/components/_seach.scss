@@ -1,0 +1,54 @@
+.seach{
+    font-size:0.12rem;
+    .seach-top{
+        width:100%;
+        display:flex;
+        justify-content: space-between;
+        height:0.6rem;
+        align-items:center;
+        position:fixed;
+        background:#fff;
+        border-bottom:1px solid #e1e1e1;
+        top:0;
+        i{
+            display:block;
+            width:0.6rem;
+            height:100%;
+            text-align:center;
+            font-size:0.3rem;
+            line-height:0.6rem;
+        }
+        h1{
+            font-weight:normal;
+            font-size:0.16rem;
+        }
+        .top-right{
+            display:flex;
+            span{
+                display:block;
+                width:0.6rem;
+                height:100%;
+                text-align:center;
+                line-height: 0.6rem;
+                font-size:0.18rem;
+            }
+        }
+    }
+    .tabs{
+        padding-top:0.6rem;
+        ul{
+            margin:0;
+            display:flex;
+            font-size:0.16rem;
+            li{
+                width:50%;
+                box-sizing: border-box;
+                padding:0.12rem 0.24rem;
+                text-align:center; 
+                &:nth-child(1){
+                    border-right:1px solid #e1e1e1;
+                }
+            }
+        }
+    }
+}
