@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import {Link} from 'react-router'
 import TuanGouList from "./tuangou-list"
+import BackTop from "../details/back-top"
 class TuanGou extends Component{
 	constructor(props){
 		super(props)
@@ -48,6 +49,7 @@ class TuanGou extends Component{
 					</div>
 				</div>
 				<TuanGouList/>
+				<BackTop/>
 			</div>
 		)
 	}
