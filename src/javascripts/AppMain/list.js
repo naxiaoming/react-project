@@ -1,5 +1,7 @@
 import React,{Component} from 'react'
 import axios from 'axios'
+import BackTop from "../details/back-top"
+import { hashHistory } from "react-router"
 import { Link } from 'react-router'
 
 class List extends Component{
@@ -19,12 +21,15 @@ class List extends Component{
 			})
 		})
 	}
+	back() {
+		hashHistory.go(-1)
+	}
 	render(){
 		let { data } = this.state
 		return (
 			<div className="list">
 				<div className="list-top">
-	        		<i className="fa fa-angle-left"></i>
+	        		<i onClick={this.back} className="fa fa-angle-left"></i>
 	        		<h1>新品上市</h1>
 	        		<div className="top-right">
 	        			<span className="fa fa-shopping-cart"></span>
