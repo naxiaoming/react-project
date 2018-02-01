@@ -4,6 +4,7 @@ import App from './javascripts/App';
 import Home from './javascripts/AppMain/home';
 import City from './javascripts/AppMain/city';
 import Seach from './javascripts/AppMain/seach';
+import List from './javascripts/AppMain/list';
 import TuanGou from './javascripts/tuangou/tuangou';
 import Details from './javascripts/details/details';
 import './stylesheets/index.scss';
@@ -15,6 +16,7 @@ let route=<Router history={hashHistory}>
 				<Route path='/home' component={Home}/>
 				<Router path='/choiceCity' component={City}/>
 				<Router path='/seach' component={Seach}/>
+				<Router path='/list/:id/:tid' component={List}/>
 				<Route path='/tuangou' component={TuanGou}/>
 				<Route path='/details/:id' component={Details}/>
 				<Redirect from="*" to="home" />
