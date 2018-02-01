@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import BackTop from "../details/back-top"
 import { Link } from 'react-router'
-
+import Values from "./values"
 class App extends Component {
 	constructor(props){
 		super(props)
 		this.state = {
 			hot:[],
 			letters:[],
-			list:{}
+			list:[],
+			listT:[]
 		}
 	}
 	componentWillMount(){
@@ -17,12 +19,19 @@ class App extends Component {
 			that.setState({
 				hot:res.data.result.hot,
 				letters:res.data.result.letters,
-				list:res.data.result.list
+				list:res.data.result.list,				
+			})
+			let arr=[]
+			for(var key in that.state.list){		
+				arr.push(that.state.list[key])
+			}
+			that.setState({
+				listT:arr
 			})
 		})
 	}
   render() {
-  	let { hot,letters,list } = this.state
+  	let { hot,letters,list,listT} = this.state	
     return (
       <div className="C-city">
         	<div className="city-top">
@@ -63,18 +72,21 @@ class App extends Component {
    				</div>
    				<div className="city-class">
    					<div className="city-warp">
-   						{
-   							Object.keys(list).map((item)=>(
-   								list[item].map((key)=>(
-   									<ul>
-   										<h1>{item}</h1>
-   										<li>{key.cityName}</li>
-   									</ul>
-   								))
-   							))
-   						}
+						
+						<div>
+							{
+								Object.keys(list).map((item,i)=>(
+									<div>
+										<h1 key={i}>{item}</h1>
+										<Values listT={listT}/>
+									</div>
+								))
+							}
+						</div>
+						
    					</div>
    				</div>
+   				<BackTop/>
       </div>
     );
   }
