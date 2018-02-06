@@ -133,6 +133,7 @@
                 margin:0;
                 border-bottom:1px solid #e1e1e1;
                 background:#f2f2f2;
+                
             }
             ul{
                 overflow: hidden;
@@ -154,5 +155,20 @@
                 }
             }
         }
+    }
+    .back-top{
+        width:0.48rem;
+        height: 0.48rem;
+        border-radius: 50%;
+        background: #fff;
+        font-size: 0.25rem;
+        position: fixed;
+        right: 0;
+        bottom:0.2rem;
+        text-align: center;
+        line-height: 0.48rem;
+        border: 1px solid #e1e1e1;
+        font-weight:normal;
+        display: none;
     }
 }

@@ -53,7 +53,7 @@ class List extends Component{
 	    page++
 	    this.getDate()
 	}
-	back(){
+	back() {
 		hashHistory.go(-1)
 	}
 	render(){
