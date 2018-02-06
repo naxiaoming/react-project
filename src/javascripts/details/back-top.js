@@ -6,11 +6,14 @@ class BackTop extends React.Component {
             // 变量t就是滚动条滚动时，到顶部的距离
             const t = document.documentElement.scrollTop || document.body.scrollTop;
             const backtop = document.getElementsByClassName('back-top')[0];
-            if (t<700) {
+            if(!backtop){
+            	return false;
+            }else if (t<700) {
                 backtop.style.display="none"
             }else{
             	backtop.style.display="block"
             }
+            
         };
     }
 
